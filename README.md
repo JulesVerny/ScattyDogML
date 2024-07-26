@@ -1,13 +1,13 @@
 # Scatty Dog Unity ML Training
 
-This is a very basic experiment utilising an erratic physics based dog mouse model. The Unity ML-Agents framework is used to attempt to learn some leg controls to enable the dog to run along a Track. The Dog Mouse creature is built around a very rough physics model, with hinged legs which are very difficult and erratic to control by hand.  So it will be interesting to see if the Unity ML machine learning methods can acheive what is awkard for a human to control.
+This is a very basic experiment utilising an erratic physics based dog mouse model. The Unity ML-Agents framework is used to attempt to learn some leg controls to enable the dog to run along a Track. The Dog Mouse creature is built around a very rough physics model, with hinged legs which are very difficult and erratic to control by hand.  So it will be interesting to see if the Unity ML machine learning methods can achieve what is awkard for a human to control.
 
-This project was executed to reaquant with the latest Unity ML-Agents, and so could be considered used as a beginner project.   
+This project was executed to re-aquaint with the latest Unity ML-Agents, and so could be considered used as a beginner project.   
 
 ![ScreenShot](DogMain.PNG)
 
 ## Video Demonstration ##
-Please see this You Tube Video Demonstration [Lucy In Sky with OPEN AI Services Video demonstration here](https://www.youtube.com/watch?v=8Y7ENoYFzZM)  
+Please see this You Tube Video Demonstration [Scatty Dog Learn To Walk Video demonstration here](https://www.youtube.com/watch?v=u2F8iMBdEQ0)  
 
 ## Implementation Details ##
 This experiment is based Unity Game Environment, and the use of the Unity ML framework to acheive some PPO based Reinforcement learning. 
