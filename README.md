@@ -28,46 +28,46 @@ There are only two scripts to this very basic experiment:
 
 The 8 Discrete Actions available to the Dog ML-Agent are, basically Dog Rotations:
 
-•	[1]:  FrontRightRotateClockwise
-•	[2]:  FrontRightRotateAntiClockwise
-•	[3]: FrontLeftRotateClockwise
-•	[4]: FrontLeftRotateAntiClockwise
-•	[5]: RearRightRotateClockwise
-•	[6]: RearRightRotateAntiClockwise
-•	[7]: RearLeftRotateClockwise
-•	[8]: RearLeftRotateAntiClockwise
+-   [1]:  FrontRightRotateClockwise
+-   [2]:  FrontRightRotateAntiClockwise
+-   [3]: FrontLeftRotateClockwise
+-   [4]: FrontLeftRotateAntiClockwise
+-   [5]: RearRightRotateClockwise
+-   [6]: RearRightRotateAntiClockwise
+-   [7]: RearLeftRotateClockwise
+-   [8]: RearLeftRotateAntiClockwise
 
 The 9x Observation Space consists of reporting upon the current Leg Rotations, the orientation of the Dogs Body, Transverse Location and Forward Progress:
 
-•  FrontRightLegAngle
-•  FrontLeftLegAngle
-•  RearRightLegAngle
-•  RearLeftLegAngle
-•  DogPitch
-•  DogRoll
-•  DogYaw
-•  DeltaTrackTransverse - The current Dog position.x relative to the centre line, in an attempt to keep centre
-•  RunningAverageProgress - The same as the reward, and indicator of Forward. (z directional) progress 
+-   FrontRightLegAngle
+-   FrontLeftLegAngle
+-   RearRightLegAngle
+-   RearLeftLegAngle
+-   DogPitch
+-   DogRoll
+-   DogYaw
+-   DeltaTrackTransverse - The current Dog position.x relative to the centre line, in an attempt to keep centre
+-   RunningAverageProgress - The same as the reward, and indicator of Forward. (z directional) progress 
 
 These variables are rougthly normalised before adding as Sensor.AddObservation calls.
 
 The reward space, is to reward forward progress along the Track foward direciton (Z Positive) with Negative rewards for toppling over and falling off the Track. With a very High reward for completing the Track.
 
 Positive Reward Signals:
-•  +5.0    : END EPISODE When Current Dog Track Distance.z exceeds 51.0, meaning the Dog has traversed along the Track Successfully 
-•  +0.0001 x RunningAverageProgress  : Incrementall Add Reward Signal of a running average forward progress, window size 50 steps  
-•  + 0.2f Incremental Add Reward, for passing forward through + 1.0  Meters
-•  + 0.2f Incremental Add Reward, for passing forward through + 2.0  Meters
-•  + 0.25f Incremental Add Reward, for passing forward through + 5.0  Meters
-•  + 1.0f Incremental Add Reward, for passing forward through + 10.0  Meters
-•  + 2.5f Incremental Add Reward, for passing forward through + 25.0  Meters
+-   +5.0    : END EPISODE When Current Dog Track Distance.z exceeds 51.0, meaning the Dog has traversed along the Track Successfully 
+-   +0.0001 x RunningAverageProgress  : Incrementall Add Reward Signal of a running average forward progress, window size 50 steps  
+-   +0.2f Incremental Add Reward, for passing forward through + 1.0  Meters
+-   +0.2f Incremental Add Reward, for passing forward through + 2.0  Meters
+-   +0.25f Incremental Add Reward, for passing forward through + 5.0  Meters
+-   +1.0f Incremental Add Reward, for passing forward through + 10.0  Meters
+-   +2.5f Incremental Add Reward, for passing forward through + 25.0  Meters
 
 Negative Reward Signals:
-•  -5.0    : END EPISODE  for exceeding the Max Epsisode Count of 6000 Action steps
-•  -2.0    : END EPISODE  for toppling over, when the Body vertical alignment differs from absolute y-Up Norm by less than 0.6
-•  -5.0    : END EPISODE  for falling off the Track, when vertical y position is less than -1.0 
-•  -0.5f Incremental Add Reward, for passing backward through - 1.0  Meters
-•  -1.0f Incremental Add Reward, for passing backward through - 2.5 Meters
+-   -5.0    : END EPISODE  for exceeding the Max Epsisode Count of 6000 Action steps
+-   -2.0    : END EPISODE  for toppling over, when the Body vertical alignment differs from absolute y-Up Norm by less than 0.6
+-   -5.0    : END EPISODE  for falling off the Track, when vertical y position is less than -1.0 
+-   -0.5f Incremental Add Reward, for passing backward through - 1.0  Meters
+-   -1.0f Incremental Add Reward, for passing backward through - 2.5 Meters
 
 
 ## Unity Training ##
