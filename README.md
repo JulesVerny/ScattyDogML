@@ -5,7 +5,7 @@ This is a very basic experiment with an erratic physics based dog mouse model, u
 This project was executed to reaquant with the latest Unity ML-Agents, and could be considered used as a beginner project.   
 
 
-![ScreenShot](DogMain.png)
+![ScreenShot](DogMain.PNG)
 
 ## Video Demonstration ##
 Please see this You Tube Video Demonstration [Lucy In Sky with OPEN AI Services Video demonstration here](https://www.youtube.com/watch?v=8Y7ENoYFzZM)  
@@ -13,7 +13,7 @@ Please see this You Tube Video Demonstration [Lucy In Sky with OPEN AI Services 
 ## Implementation Details ##
 This experiment is based Unity Game Environment, and the Unity ML framework to acheive some PPO based Reinforcement learning. 
 
-![ScreenShot](Design.png)
+![ScreenShot](Design.PNG)
 
 The Dog is very simple creature consisting of a Rigid Body Body, with a Capsule Collider, and four Legs. Each of the Leg is a Rigid Body, attached to the Body via a Hinge Point. The only Actions are to Rotate each leg 10 degrees Clockwise, or 10 degrees Anticlockewise.  These are achieved through explcit local Rotational chnages, rather than by Torque etc. The Leg Box colliders and the Track, have a Physical Friction material, to avoid excessive sliding.  
 
@@ -29,10 +29,7 @@ There are only two scripts to this very basic experiment:
 Training through ML- Agents code. With 10 Replicated environments of Dog and Tracks to speed up Training. 
 The PPO Config file is provided. The essential Training, did not require much hyper paramter tunning, for this very rough and quick experiment. So after only three Training Runs, with some acceptable training, ended up with the following hyper parameters:
 
-![ScreenShot](Run3Reward.png)
-
-
-
+![ScreenShot](Run3Reward.PNG)
 
 ## Observations and Discussion ##
 
@@ -41,12 +38,6 @@ Very Little Hyper parameter tuning (was attempted) to get some basic Training, a
 The final behaviours are still pretty erratic leg motion, with no obvious or consistent leg motion to acheive forward motion. 
 
 The reward performance grew fairly consistently in the early to mid training session (Up to 4.5 Million epochs)  However the Reward function deteriotated with no more consistent growth or steady reward perfomance in the later training from 5 million to 10 million epochs.  
-
-
-
-
-
-## Further Work and Development ##
 
 
 ## Acknowledgements ##
