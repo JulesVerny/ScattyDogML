@@ -28,14 +28,14 @@ There are only two scripts to this very basic experiment:
 
 The 8 Discrete Actions available to the Dog ML-Agent are, basically Dog Rotations:
 
--   [1]:  FrontRightRotateClockwise
--   [2]:  FrontRightRotateAntiClockwise
--   [3]: FrontLeftRotateClockwise
--   [4]: FrontLeftRotateAntiClockwise
--   [5]: RearRightRotateClockwise
--   [6]: RearRightRotateAntiClockwise
--   [7]: RearLeftRotateClockwise
--   [8]: RearLeftRotateAntiClockwise
+-   1: FrontRightRotateClockwise
+-   2: FrontRightRotateAntiClockwise
+-   3: FrontLeftRotateClockwise
+-   4: FrontLeftRotateAntiClockwise
+-   5: RearRightRotateClockwise
+-   6: RearRightRotateAntiClockwise
+-   7: RearLeftRotateClockwise
+-   8: RearLeftRotateAntiClockwise
 
 The 9x Observation Space consists of reporting upon the current Leg Rotations, the orientation of the Dogs Body, Transverse Location and Forward Progress:
 
