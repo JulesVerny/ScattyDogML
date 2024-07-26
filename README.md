@@ -4,7 +4,6 @@ This is a very basic experiment with an erratic physics based dog mouse model, u
 
 This project was executed to reaquant with the latest Unity ML-Agents, and could be considered used as a beginner project.   
 
-
 ![ScreenShot](DogMain.PNG)
 
 ## Video Demonstration ##
@@ -21,17 +20,28 @@ The Unity Package is provided to set up and execute this experiment. You will ne
 I had to Use the Development Branch of ML-Agents (circa July 2024) as the last formal Release 21, had an issue with numpy incompatibility. 
 
 There are only two scripts to this very basic experiment:
-- MLDog.CS      :  This implements the core Dog ML Agent class and provides the interface into ML-Agents methods 
-- LegControl.CS         :  This Script provides the leg control to each leg, and so implements each Leg rotation Action request.  
+- MLDog.CS              :  This implements the core Dog ML Agent class and provides the interface into ML-Agents methods 
+- LegControl.CS         :  This Script provides the leg control to each leg, and so implements each Leg rotation Action request.
+- LocalDisplayManager   :  This is simply a utility to display some of the agents Performance and Orientation variables onto a local progress display canvas 
 
 
 ## Unity Training ##
 Training through ML- Agents code. With 10 Replicated environments of Dog and Tracks to speed up Training. 
 The PPO Config file is provided. The essential Training, did not require much hyper paramter tunning, for this very rough and quick experiment. So after only three Training Runs, with some acceptable training, ended up with the following hyper parameters:
+-  batch_size     :  2040
+-  buffer_size    :  20480
+-  hidden_units   : 512
+-  learning_rate  : 0.0005
+-  num_layers     : 3 
+-  time_horizon  : 1000
+
+See the DogMLConfig.yaml file in teh config folder for more details.
 
 ![ScreenShot](Run3Reward.PNG)
 
 ## Observations and Discussion ##
+
+The final Brain has been uploaded to Trained Brains, and can be used in Inference mode to replicate and run the Trained Behaviour. 
 
 Very Little Hyper parameter tuning (was attempted) to get some basic Training, and to achieve the main objectives of Dogs getting failrly consistently to traverse along the Track.
 
@@ -42,6 +52,6 @@ The reward performance grew fairly consistently in the early to mid training ses
 
 ## Acknowledgements ##
 
-- 
+-  Unity ML Agents at:  https://github.com/Unity-Technologies/ml-agents
 
 
